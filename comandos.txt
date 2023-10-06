@@ -19,4 +19,5 @@ https://www.toptal.com/developers/gitignore
 - git init
 - git branch -m main
 - git branch --list
+- git log --oneline
 

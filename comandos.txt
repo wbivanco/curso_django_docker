@@ -1,0 +1,22 @@
+----- Docker -----
+- docker build --no-cache -t sistema . (-t nombre, . parado en carpeta raiz del proyecto)
+- docker run sistema (sistema nombre del contenedor)
+
+- docker ps (-a)
+- docker rm id
+- docker images
+- docker rmi id
+
+- docker-compose up
+- docker-compose up -d (detached, no ocupa la consola)
+- docker-compose up -d --build (reconstruye imagen)
+- docker-compose down
+- docker-compose exec web python manage.py showmigrations (web nombre del servicios en docker-compose)
+
+
+----- Git -----
+https://www.toptal.com/developers/gitignore
+- git init
+- git branch -m main
+- git branch --list
+

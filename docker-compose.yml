@@ -9,3 +9,15 @@ services:
     volumes:
       - .:/code
     
+  db:
+    image: postgres:15
+    volumes: 
+      - ../data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+      - POSTGRES_DB=db_django_docker
+    ports:
+      - "5432:5432"
+
+volumes:
+  pg_data:

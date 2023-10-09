@@ -8,6 +8,12 @@ services:
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
+    depends_on:
+      - db
+      #db:
+        #condition: service_healthy # saludbable es que este pg arriba y db iniciada
+    
+    #restart: always # sino esta healthy se reinicia
     
   db:
     image: postgres:15
@@ -17,7 +23,12 @@ services:
       - POSTGRES_HOST_AUTH_METHOD=trust
       - POSTGRES_DB=db_django_docker
     ports:
-      - "5432:5432"
-
+      - "5433:5432"
+    #healthcheck: # Devuelve un valor para healthy
+      #test: ["CMD-SHELL", "pg_isready -U postgres"]
+      #interval: 5s
+      #timeout: 5s
+      #retries: 5
+     
 volumes:
   pg_data:

@@ -23,3 +23,10 @@ https://www.toptal.com/developers/gitignore
 - git branch --list
 - git log --oneline
 
+
+Librerías Menú:
+---------------
+https://bootswatch.com/
+https://releases.jquery.com/
+https://cdnjs.com/libraries/popper.js/news
+
